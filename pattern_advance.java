@@ -143,14 +143,57 @@ public class pattern_advance {
         }
         
     }
+    public static void number_pyramid(int n){
+        int count=1;
+        for(int i=1;i<=n;i++){
+            //inner-loop=space+number
+            //space
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //number
+            for(int j=1;j<=(2*i)-1;j++){
+                if(j%2 ==0){
+                    System.out.print(" ");
+                }
+                else {
+                    System.out.print(count);
+                }
+            }
+            count ++;
+            System.out.println();
+        }
+    }
+    public static void palindrome_number_pattern(int n){
+        //outer_loop
+        for(int i=1 ;i<=n;i++){
+            //inner_loop=space+number
+            //space
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //number(decsending)
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            //number(ascending)
+            for(int j=2;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+
+    }
      public static void main(String args[]){
-        hollow_rectangle(5, 5 );
-        inverted_pyramid(5);
-        inverted_half_pyramid(5);
-        floyd_triangle(5);
-        _0_1_triangle(5);
-        butterfly_pattern(5);
-        solid_rhombus(5);
-        hollow_rhombus(5);
-        dimond_pattern(5);
+        // hollow_rectangle(5, 5 );
+        // inverted_pyramid(5);
+        // inverted_half_pyramid(5);
+        // floyd_triangle(5);
+        // _0_1_triangle(5);
+        // butterfly_pattern(5);
+        // solid_rhombus(5);
+        // hollow_rhombus(5);
+        // dimond_pattern(5);
+        // number_pyramid(9);
+        palindrome_number_pattern(5);
 }
